@@ -92,7 +92,7 @@ def scrape_ebay_items(driver, url):
     return scraped_items
 
 
-def save_data_to_csv(data, filename="ebay_scraped_items.csv"):
+def save_data_to_csv(data, filename="ebay_tech_deals.csv"):
     try:
         df = pd.read_csv(filename)
     except FileNotFoundError:
@@ -113,7 +113,7 @@ if __name__ == "__main__":
 
     if scraped_items:
         save_data_to_csv(scraped_items)
-        print("Data saved to ebay_scraped_items.csv")
+        print("Data saved to ebay_tech_deals.csv")
     else:
         print("No data found.")
 
